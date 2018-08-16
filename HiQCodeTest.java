@@ -12,12 +12,12 @@ public class HiQCodeTest {
 			int columns = scan.nextInt();
 			arr = new int[rows][columns];
 			System.out.println("Du angav rummets storlek till: " + rows + " x " + columns);
-			System.out.println("Ange start-positionen på bilen");
+			System.out.println("Ange start-positionen pÃ¥ bilen");
 			
 			int start = scan.nextInt();
 			int start2 = scan.nextInt();
 			String heading = scan.next();
-			System.out.println("Vart ska bilen ta vägen?");
+			System.out.println("Vart ska bilen ta vÃ¤gen?");
 			scan.nextLine();
 			
 			arr[start][start2] = 1;
@@ -66,7 +66,7 @@ public class HiQCodeTest {
 
 			}
 			catch(ArrayIndexOutOfBoundsException exception) {
-			    System.out.println("Du förlorade, lol!");
+			    System.out.println("Du fÃ¶rlorade");
 			}
 		}
 		
