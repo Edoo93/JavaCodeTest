@@ -14,49 +14,52 @@ public class HiQCodeTest {
 			System.out.println("Du angav rummets storlek till: " + rows + " x " + columns);
 			System.out.println("Ange start-positionen på bilen");
 			
-			int start = scan.nextInt();
-			int start2 = scan.nextInt();
+			int startPosRow = scan.nextInt();
+			int startPosCol = scan.nextInt();
+			System.out.println("N för North, S för South, E för East, W för West");
 			String heading = scan.next();
 			System.out.println("Vart ska bilen ta vägen?");
 			scan.nextLine();
 			
-			arr[start][start2] = 1;
+			//Ge värdet 1 på startpositionen i den tvådimensionella arrayen
+			//Som sedan inte ändras, för att lättare ha koll på vart bilen startade
+			arr[startPosRow][startPosCol] = 1;
 			String input = scan.nextLine();
 			try {
 				for(int i = 0; i < input.length(); i++) {
 					if(input.charAt(i) == 'B') {
-						start = start+1;
-						if(arr[start][start2] == 1) {
-							arr[start][start2] = 1;
+						startPosRow = startPosRow+1;
+						if(arr[startPosRow][startPosCol] == 1) {
+							arr[startPosRow][startPosCol] = 1;
 						}else {
-							arr[start][start2] = 2;	
+							arr[startPosRow][startPosCol] = 2;	
 						}
 					}
 					
 					else if(input.charAt(i) == 'F') {
-						start = start-1;
-						if(arr[start][start2] == 1) {
-							arr[start][start2] = 1;
+						startPosRow = startPosRow-1;
+						if(arr[startPosRow][startPosCol] == 1) {
+							arr[startPosRow][startPosCol] = 1;
 						}else {
-							arr[start][start2] = 2;	
+							arr[startPosRow][startPosCol] = 2;	
 						}
 					}
 					
 					else if(input.charAt(i) == 'L') {
-						start2 = start2-1;
-						if(arr[start][start2] == 1) {
-							arr[start][start2] = 1;
+						startPosCol = startPosCol-1;
+						if(arr[startPosRow][startPosCol] == 1) {
+							arr[startPosRow][startPosCol] = 1;
 						}else {
-							arr[start][start2] = 2;
+							arr[startPosRow][startPosCol] = 2;
 						}
 					}
 					
 					else if(input.charAt(i) == 'R') {
-						start2 = start2+1;
-						if(arr[start][start2] == 1) {
-							arr[start][start2] = 1;
+						startPosCol = startPosCol+1;
+						if(arr[startPosRow][startPosCol] == 1) {
+							arr[startPosRow][startPosCol] = 1;
 						}else {
-							arr[start][start2] = 2;
+							arr[startPosRow][startPosCol] = 2;
 						}
 					}
 					
