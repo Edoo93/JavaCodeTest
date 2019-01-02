@@ -6,7 +6,7 @@ public class HiQCodeTest {
 	public static void main(String[] args) {
 		int[][] arr;
 		Scanner scan = new Scanner(System.in);
-		System.out.println("Enter the size of the room");
+		System.out.println("Ange rummets storlek");
 		while(scan.hasNext()) {
 			int rows = scan.nextInt();
 			int columns = scan.nextInt();
